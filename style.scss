@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: aliceblue;
+}
+
+.body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('scr/back.png');
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+    &-title {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    &-score {
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+    }
+    &-player {
+        text-align: center;
+        &--title {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        &--score {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+    }
+    &-refresh {
+        cursor: pointer;
+    }
+    &-btn {
+        transition: .3s;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.game {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    &-fields {
+        display: grid;
+        grid-template-columns: repeat(9,1fr);
+    }
+}
+
+.X {
+    &-first, &-second, &-third {
+        grid-column: span 3;
+    }
+}
+
+.field {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    position: relative;
+}
+
+.choose {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    &.cross {
+        width: 100px;
+        height: 5px;
+        background-color: white;
+        transform: rotate(-45deg);
+        border-radius: 6px;
+        top: 50%;
+        &::before {
+            content: "";
+            width: 100px;
+            height: 5px;
+            background-color: white;
+            position: absolute;
+            border-radius: 6px; 
+            transform: rotate(-90deg);
+        }
+    }
+    &.zero {
+        width: 80px;
+        height: 80px;
+        border: 5px solid white;
+        border-radius: 80px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+.br {
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+}
+.b {
+    border-bottom: 3px solid white;
+}
+.r {
+    border-right: 3px solid white;
+}
+

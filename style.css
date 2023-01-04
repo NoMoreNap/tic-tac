@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: aliceblue;
+}
+
+.body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("scr/back.png");
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
+}
+.header-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.header-score {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+.header-player {
+  text-align: center;
+}
+.header-player--title {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.header-player--score {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.header-refresh {
+  cursor: pointer;
+}
+.header-btn {
+  transition: 0.3s;
+}
+.header-btn:hover {
+  transform: scale(1.1);
+}
+
+.game {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.game-fields {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.X-first, .X-second, .X-third {
+  grid-column: span 3;
+}
+
+.field {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  position: relative;
+}
+
+.choose {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+.choose.cross {
+  width: 100px;
+  height: 5px;
+  background-color: white;
+  transform: rotate(-45deg);
+  border-radius: 6px;
+  top: 50%;
+}
+.choose.cross::before {
+  content: "";
+  width: 100px;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  border-radius: 6px;
+  transform: rotate(-90deg);
+}
+.choose.zero {
+  width: 80px;
+  height: 80px;
+  border: 5px solid white;
+  border-radius: 80px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.br {
+  border-bottom: 3px solid white;
+  border-right: 3px solid white;
+}
+
+.b {
+  border-bottom: 3px solid white;
+}
+
+.r {
+  border-right: 3px solid white;
+}/*# sourceMappingURL=style.css.map */
